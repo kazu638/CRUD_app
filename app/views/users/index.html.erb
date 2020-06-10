@@ -12,9 +12,9 @@
             <td><%= user.id %></td>
             <td><%= user.name %></td>
             <td><%= user.age %></td>
-            <td><%= link_to "詳細", "/users/#{user.id}" %></td>
-            <td><%= link_to "編集", "/users/#{user.id}/edit" %></td>
-            <td><%= link_to "削除", "/users/#{user.id}", method: :delete, data: {confirm: "本当に削除しますか？"} %></td>
+            <td><%= link_to "詳細", user_path(user.id) %></td>
+            <td><%= link_to "編集", edit_user_path(user.id) %></td>
+            <td><%= link_to "削除", user_path(user.id), method: :delete, data: {confirm: "本当に削除しますか？"} %></td>
           </tr>        
         <% end %>
       </table>    
@@ -23,4 +23,4 @@
   <% end %>
 </div>
 
-<p class="link"><%= link_to "登録フォームへ", "/users/new" %></p>
+<p class="link"><%= link_to "登録フォームへ", new_user_path %></p>

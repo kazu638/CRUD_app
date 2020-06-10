@@ -8,7 +8,7 @@
     <tr><th>年齢</th><td><%= @user.age %></td></tr>
     <tr><th>メッセージ</th><td><%= @user.message %></td></tr>
   </table>
-  <%= link_to "編集", "/users/#{@user.id}/edit" %>
-  <%= link_to "削除", "/users/#{@user.id}", method: :delete, data: {confirm: "本当に削除しますか？"} %>
-  <%= link_to "ユーザー一覧画面", "/users" %>
+  <%= link_to "編集", edit_user_path(@user.id) %>
+  <%= link_to "削除", user_path(@user.id), method: :delete, data: {confirm: "本当に削除しますか？"} %>
+  <%= link_to "ユーザー一覧画面", users_path %>
 </div>

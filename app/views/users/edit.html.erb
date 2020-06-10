@@ -3,7 +3,7 @@
 <div class="form-wrap">
   <h2>編集フォーム</h2>
 
-  <%= form_with model: @user, url: "/users/#{@user.id}" do |f| %>
+  <%= form_with model: @user, local: true do |f| %>
     <p><%= f.label :name, "名前：" %><%= f.text_field :name %></p>
     <p><%= f.label :age, "年齢：" %><%= f.number_field :age, min: 0 %></p>
     <p><%= f.label :message, "メッセージ" %></p><%= f.text_area :message, rows: "10", cols: "27" %></p>
@@ -12,7 +12,7 @@
 </div>
 
 <p class="link">
-  <%= link_to "詳細", "/users/#{@user.id}" %>
-  <%= link_to "削除", "/users/#{@user.id}", method: :delete, data: {confirm: "本当に削除しますか？"} %>
-  <%= link_to "ユーザー一覧画面", "/users" %>
+  <%= link_to "詳細", user_path(@user.id) %>
+  <%= link_to "削除", user_path(@user.id), method: :delete, data: {confirm: "本当に削除しますか？"} %>
+  <%= link_to "ユーザー一覧画面", users_path %>
 </p>
