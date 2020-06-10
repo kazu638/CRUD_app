@@ -1,0 +1,14 @@
+<p class="alert-message"><%= flash[:alert] if flash[:alert].present? %></p>
+
+
+<div class="form-wrap">
+  <h2>登録フォーム</h2>
+  <%= form_with model: @user, local: true do |f| %>
+    <p><%= f.label :name, "名前：" %><%= f.text_field :name %></p>
+    <p><%= f.label :age, "年齢：" %><%= f.number_field :age, min: 0 %></p>
+    <p><%= f.label :message, "メッセージ" %></p><%= f.text_area :message, size: "27" %></p>
+    <%= f.submit "登録", id: "view-new-register"%>
+  <% end %>
+</div>
+
+<p class="link"><%= link_to "ユーザー一覧画面", "/users" %></p>

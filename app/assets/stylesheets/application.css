@@ -1,0 +1,110 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* index */
+.notice-message{
+  background-color: greenyellow;
+  color: #0f0f0f;
+  text-align: center;
+}
+
+.userlist-wrap{
+  width: 500px;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+table{
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 100%;
+}
+
+th {
+  background-color: rgb(138, 200, 241);
+}
+
+th,td{
+  padding: 20px 10px;
+  border: solid 1px #158CDD; 
+}
+
+
+
+/* new */
+.alert-message{
+  background-color: rgb(206, 69, 99);
+  color: white;
+  text-align: center;
+}
+
+.field_with_errors{
+  display: inline;
+}
+
+.form-wrap{
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+  border: medium solid rgb(0, 204, 255);
+  border-radius: 1em;
+}
+
+.form-wrap p:nth-child(5){
+  text-align: left;
+  padding-left: 40px;
+}
+
+.link{
+  text-align: center;
+}
+
+/* show */
+
+.show-wrap table th{
+  width:25%
+}
+
+.show-wrap table td{
+  text-align: left;
+}
+
+.show-wrap table{
+  margin-bottom: 30px;
+}
+
+.show-wrap{
+  width: 500px;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.show-wrap a{
+  margin-right: 10px;
+}
+
+.show-wrap a:last-child{
+  margin-right: 0;
+}
+
+/* edit */
+.form-wrap p:nth-child(6){
+  text-align: left;
+  padding-left: 40px;
+}
